@@ -8,9 +8,12 @@
     "start": "next start"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.14.0",
+    "@sendgrid/mail": "^7.2.2",
     "next": "9.5.1",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "react-hook-form": "^6.2.0"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^2.3.0",
