@@ -9,7 +9,22 @@ export default function Home({ projects }) {
     <div className="min-h-screen">
       <Head>
         <title>Julia Calabria</title>
-        <meta name="Julia Calabria - Portfolio"></meta>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="title" content="Julia Calabria" />
+        <meta
+          name="description"
+          content="Editor, producer portfolio Julia Calabria."
+        />
+        <meta
+          name="keywords"
+          content="juli, julia, calabria, editor, ads, aftereffects, premier"
+        />
+        <meta name="robots" content="index, follow" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="language" content="English" />
+        <meta name="author" content="jessyhalife" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <section id="hero" className="min-h-screen">
@@ -17,18 +32,18 @@ export default function Home({ projects }) {
           <h1 className="text-6xl pt-20 md:text-8xl font-bold tracking-tighter leading-tight md:pr-8">
             Hi, I'm Julia Calabria.
           </h1>
-          <div className="text-gray-600">
-            {/* <i className="fas fa-map-marker-alt "> </i> */}
-            <p className="ml-3 inline">Buenos Aires, Argentina.</p>
+          <div className="text-gray-600 mr-1">
+            <i className="fas fa-map-marker-alt "> </i>
+            <p className="ml-2 inline">Buenos Aires, Argentina.</p>
           </div>
         </div>
-
         <section>
           <div className="md:mx-20 sm: mx-auto my-8 mb-8 md:mb-16 max-w-md">
             <div className="mx-5 sm: mx-0">
               <p>Productora, editora y realizadora de contenido audiovisual.</p>
               <p className="font-semibold mt-2">
-                Currently @ Ponce Buenos Aires
+                _currently @ 
+                <p className="inline text-gray-700 "> Ponce Buenos Aires</p>
               </p>
             </div>
           </div>
