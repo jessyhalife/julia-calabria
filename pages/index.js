@@ -79,7 +79,7 @@ export default function Home({ projects }) {
                 <div className="mb-4">
                   <label
                     className="block text-gray-700 text-sm font-bold mb-2"
-                    for="name"
+                    htmlFor="name"
                   >
                     Name
                   </label>
@@ -93,7 +93,7 @@ export default function Home({ projects }) {
                 <div className="mb-4">
                   <label
                     className="block text-gray-700 text-sm font-bold mb-2"
-                    for="title"
+                    htmlFor="title"
                   >
                     Title
                   </label>
@@ -107,7 +107,7 @@ export default function Home({ projects }) {
                 <div className="mb-6">
                   <label
                     className="block text-gray-700 text-sm font-bold mb-2"
-                    for="message"
+                    htmlFor="message"
                   >
                     Message
                   </label>
