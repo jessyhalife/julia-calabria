@@ -35,7 +35,7 @@ export default function Home({ projects }) {
         </section>
         <section id="links">
           <div className="flex px-24">
-            <div className="flex-initial justify-content-around mx-1">
+            <div className="md: flex-initial sm: flex-1 mr-1">
               <button
                 className="bg-black hover:bg-gray-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                 type="button"
@@ -44,7 +44,7 @@ export default function Home({ projects }) {
                 View projects
               </button>
             </div>
-            <div className="flex-initial">
+            <div className="md: flex-initial sm: flex-1">
               <button
                 className="bg-black hover:bg-gray-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                 type="button"
@@ -115,7 +115,7 @@ export default function Home({ projects }) {
                 </div>
                 <div className="flex items-center justify-between">
                   <button
-                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                    className="bg-black hover:bg-gray-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                     type="button"
                   >
                     Contact me
