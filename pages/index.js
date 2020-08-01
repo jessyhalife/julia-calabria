@@ -1,6 +1,7 @@
 import Head from "next/head";
-
-export default function Home() {
+import { getSomeProjects } from "../lib/graphcms";
+import Project from "../components/Project";
+export default function Home({ projects }) {
   return (
     <div className="min-h-screen">
       <Head>
@@ -33,16 +34,24 @@ export default function Home() {
           </div>
         </section>
         <section id="links">
-          <div className="d-flex flex-row mx-10">
-            <div className="col">
-              <a href="#projects" className="text-gray-600">
+          <div className="flex px-24">
+            <div className="flex-initial justify-content-around mx-1">
+              <button
+                className="bg-black hover:bg-gray-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                type="button"
+                onClick={() => (window.location.href = "#projects")}
+              >
                 View projects
-              </a>
+              </button>
             </div>
-            <div className="col">
-              <a href="#contact" className="text-gray-600">
-                Let´s get it touch
-              </a>
+            <div className="flex-initial">
+              <button
+                className="bg-black hover:bg-gray-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                type="button"
+                onClick={() => (window.location.href = "#contact")}
+              >
+                Let's get in touch
+              </button>
             </div>
           </div>
         </section>
@@ -51,128 +60,10 @@ export default function Home() {
         <div className="bg-black border-t-2 mt-10 text-white px-10 pt-8 pb-8">
           <h1 className="text-4xl font-semibold tracking-tighter">Projects</h1>
           <section>
-            <div className="grid  sm:grid-cols-1 md:grid-cols-3 mt-10">
-              <div className="max-w-sm rounded overflow-hidden shadow-lg">
-                <img
-                  sizes="404px"
-                  src="https://mir-s3-cdn-cf.behance.net/projects/404/a48126101224991.Y3JvcCwxMjE5LDk1MywyMDgsNTA5.png"
-                  srcset="https://mir-s3-cdn-cf.behance.net/projects/115/a48126101224991.Y3JvcCwxMjE5LDk1MywyMDgsNTA5.png 115w, https://mir-s3-cdn-cf.behance.net/projects/202/a48126101224991.Y3JvcCwxMjE5LDk1MywyMDgsNTA5.png 202w, https://mir-s3-cdn-cf.behance.net/projects/230/a48126101224991.Y3JvcCwxMjE5LDk1MywyMDgsNTA5.png 230w, https://mir-s3-cdn-cf.behance.net/projects/404/a48126101224991.Y3JvcCwxMjE5LDk1MywyMDgsNTA5.png 404w, https://mir-s3-cdn-cf.behance.net/projects/max_808/a48126101224991.Y3JvcCwxMjE5LDk1MywyMDgsNTA5.png 808w"
-                  alt="ONCE Y FLORES · E-COMMERCE"
-                  class="ProjectCoverNeue-image-1MZ js-cover-image"
-                />
-
-                <div className="px-6 py-4">
-                  <div className="font-bold text-xl mb-2">
-                    ONCE Y FLORES - e-commerce
-                  </div>
-                  <p className="text-gray-700 text-base">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Voluptatibus quia, nulla! Maiores et perferendis eaque,
-                    exercitationem praesentium nihil.
-                  </p>
-                </div>
-                <div className="px-6 py-4">
-                  <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
-                    #photography
-                  </span>
-                  <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
-                    #travel
-                  </span>
-                  <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">
-                    #winter
-                  </span>
-                </div>
-              </div>
-              <div className="max-w-sm rounded overflow-hidden shadow-lg">
-                <img
-                  sizes="404px"
-                  src="https://mir-s3-cdn-cf.behance.net/projects/404/809b5c101224749.Y3JvcCw3NzksNjA5LDU3MCwyMzc.png"
-                  srcset="https://mir-s3-cdn-cf.behance.net/projects/115/809b5c101224749.Y3JvcCw3NzksNjA5LDU3MCwyMzc.png 115w, https://mir-s3-cdn-cf.behance.net/projects/202/809b5c101224749.Y3JvcCw3NzksNjA5LDU3MCwyMzc.png 202w, https://mir-s3-cdn-cf.behance.net/projects/230/809b5c101224749.Y3JvcCw3NzksNjA5LDU3MCwyMzc.png 230w, https://mir-s3-cdn-cf.behance.net/projects/404/809b5c101224749.Y3JvcCw3NzksNjA5LDU3MCwyMzc.png 404w, https://mir-s3-cdn-cf.behance.net/projects/max_808/809b5c101224749.Y3JvcCw3NzksNjA5LDU3MCwyMzc.png 808w"
-                  alt="HELPERS · INSTITUCIONAL"
-                  class="ProjectCoverNeue-image-1MZ js-cover-image"
-                />
-                <div className="px-6 py-4">
-                  <div className="font-bold text-xl mb-2">
-                    HELPERS - INSTITUCIONAL
-                  </div>
-                  <p className="text-gray-700 text-base">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Voluptatibus quia, nulla! Maiores et perferendis eaque,
-                    exercitationem praesentium nihil.
-                  </p>
-                </div>
-                <div className="px-6 py-4">
-                  <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
-                    #photography
-                  </span>
-                  <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
-                    #travel
-                  </span>
-                  <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">
-                    #winter
-                  </span>
-                </div>
-              </div>
-              <div className="max-w-sm rounded overflow-hidden shadow-lg">
-                <img
-                  sizes="404px"
-                  src="https://mir-s3-cdn-cf.behance.net/projects/404/65a99399253401.Y3JvcCwxMDQ1LDgxOCwyMDcsMA.png"
-                  srcset="https://mir-s3-cdn-cf.behance.net/projects/115/65a99399253401.Y3JvcCwxMDQ1LDgxOCwyMDcsMA.png 115w, https://mir-s3-cdn-cf.behance.net/projects/202/65a99399253401.Y3JvcCwxMDQ1LDgxOCwyMDcsMA.png 202w, https://mir-s3-cdn-cf.behance.net/projects/230/65a99399253401.Y3JvcCwxMDQ1LDgxOCwyMDcsMA.png 230w, https://mir-s3-cdn-cf.behance.net/projects/404/65a99399253401.Y3JvcCwxMDQ1LDgxOCwyMDcsMA.png 404w, https://mir-s3-cdn-cf.behance.net/projects/max_808/65a99399253401.Y3JvcCwxMDQ1LDgxOCwyMDcsMA.png 808w"
-                  alt="NAVARRO CORREAS · DOLORES EYEWEAR CASE STUDY"
-                  class="ProjectCoverNeue-image-1MZ js-cover-image"
-                />
-                <div className="px-6 py-4">
-                  <div className="font-bold text-xl mb-2">
-                    NAVARRO CORREAS - DOLORES EYEWEAR CASE STUDY
-                  </div>
-                  <p className="text-gray-700 text-base">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Voluptatibus quia, nulla! Maiores et perferendis eaque,
-                    exercitationem praesentium nihil.
-                  </p>
-                </div>
-                <div className="px-6 py-4">
-                  <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
-                    #photography
-                  </span>
-                  <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
-                    #travel
-                  </span>
-                  <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">
-                    #winter
-                  </span>
-                </div>
-              </div>
-              <div className="max-w-sm rounded overflow-hidden shadow-lg">
-                <img
-                  sizes="404px"
-                  src="https://mir-s3-cdn-cf.behance.net/projects/404/65a99399253401.Y3JvcCwxMDQ1LDgxOCwyMDcsMA.png"
-                  srcset="https://mir-s3-cdn-cf.behance.net/projects/115/65a99399253401.Y3JvcCwxMDQ1LDgxOCwyMDcsMA.png 115w, https://mir-s3-cdn-cf.behance.net/projects/202/65a99399253401.Y3JvcCwxMDQ1LDgxOCwyMDcsMA.png 202w, https://mir-s3-cdn-cf.behance.net/projects/230/65a99399253401.Y3JvcCwxMDQ1LDgxOCwyMDcsMA.png 230w, https://mir-s3-cdn-cf.behance.net/projects/404/65a99399253401.Y3JvcCwxMDQ1LDgxOCwyMDcsMA.png 404w, https://mir-s3-cdn-cf.behance.net/projects/max_808/65a99399253401.Y3JvcCwxMDQ1LDgxOCwyMDcsMA.png 808w"
-                  alt="NAVARRO CORREAS · DOLORES EYEWEAR CASE STUDY"
-                  class="ProjectCoverNeue-image-1MZ js-cover-image"
-                />
-                <div className="px-6 py-4">
-                  <div className="font-bold text-xl mb-2">
-                    NAVARRO CORREAS - DOLORES EYEWEAR CASE STUDY
-                  </div>
-                  <p className="text-gray-700 text-base">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Voluptatibus quia, nulla! Maiores et perferendis eaque,
-                    exercitationem praesentium nihil.
-                  </p>
-                </div>
-                <div className="px-6 py-4">
-                  <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
-                    #photography
-                  </span>
-                  <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
-                    #travel
-                  </span>
-                  <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">
-                    #winter
-                  </span>
-                </div>
-              </div>
+            <div className="grid sm:grid-cols-1 md:grid-cols-3 mt-10">
+              {projects.map((x) => (
+                <Project project={x} />
+              ))}
             </div>
           </section>
         </div>
@@ -237,4 +128,12 @@ export default function Home() {
       </section>
     </div>
   );
+}
+
+export async function getStaticProps() {
+  const projects = (await getSomeProjects()) || [];
+
+  return {
+    props: { projects },
+  };
 }
