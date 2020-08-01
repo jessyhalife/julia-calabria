@@ -9,13 +9,19 @@ const Projects = ({ projects }) => {
       <Head>
         <title>Julia Calabria</title>
         <meta name="Julia Calabria - Portfolio"></meta>
+        <meta
+          name="google-site-verification"
+          content="WYqXbVn_we0RKjGpbwsBq24Nj8ydYJ1nc2PY1aQlAi8"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <section id="hero" className="container pb-3">
         <div className="container mx-auto px-5">
           <Link href="/">
-            <a >
-              <p className="text-6xl pt-20 md:text-8xl font-bold tracking-tighter leading-tight md:pr-8">Projects.</p>
+            <a>
+              <p className="text-6xl pt-20 md:text-8xl font-bold tracking-tighter leading-tight md:pr-8">
+                Projects.
+              </p>
             </a>
           </Link>
         </div>

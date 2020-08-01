@@ -17,9 +17,10 @@ export default function Home({ projects }) {
           name="description"
           content="Editor, producer portfolio Julia Calabria."
         />
+        <meta name="google-site-verification" content="WYqXbVn_we0RKjGpbwsBq24Nj8ydYJ1nc2PY1aQlAi8" />
         <meta
           name="keywords"
-          content="juli, julia, calabria, editor, ads, aftereffects, premier"
+          content="juli, julia, juliacalabria, julicalabria, calabria, editor, ads, aftereffects, premier"
         />
         <meta name="robots" content="index, follow" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
