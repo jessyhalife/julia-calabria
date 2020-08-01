@@ -6,6 +6,7 @@ export default function Home({ projects }) {
     <div className="min-h-screen">
       <Head>
         <title>Julia Calabria</title>
+        <meta name="Julia Calabria - Portfolio"></meta>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <section id="hero" className="min-h-screen">
