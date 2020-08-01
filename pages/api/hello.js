@@ -2,8 +2,8 @@
 import { sendMail } from "../../lib/emailSender";
 
 export default (req, res) => {
-  const { mail } = req.body;
+  const { email, title, message } = req.body;
   console.log(req.body);
-  if (sendMail(mail)) res.send(200);
+  if (sendMail({ email, title, message })) res.send(200);
   else res.send(400);
 };

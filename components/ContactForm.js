@@ -6,20 +6,15 @@ const ContactForm = () => {
   const [loading, setLoading] = useState(false);
   const onSubmit = async (formData) => {
     setLoading(true);
-    const res = await sendEmail(formData);
-
-    setLoading(false);
-  };
-
-  const sendEmail = async (formData) => {
     const res = await fetch("/api/hello", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
       },
-      body: JSON.stringify({ formData }),
+      body: JSON.stringify(formData),
     });
-    console.log(res);
+
+    setLoading(false);
   };
 
   return (
