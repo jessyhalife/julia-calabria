@@ -33,7 +33,7 @@ export default function Home({ projects }) {
             </div>
           </div>
         </section>
-        {/* <section>
+        <section>
           <div className="flex justify-evenly md:mx-8 sm: mx-auto my-8 mb-8 md:mb-16 max-w-md ">
             <div className="text-lg text-gray-700 ">
               <a href="https://ar.linkedin.com/in/juliacalabria">
@@ -56,7 +56,7 @@ export default function Home({ projects }) {
               </a>
             </div>
           </div>
-        </section> */}
+        </section>
         <section id="links">
           <div className="flex px-24">
             <div className="md: flex-initial sm: flex-1 mr-1">
